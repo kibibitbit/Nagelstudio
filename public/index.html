@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dein Nagelstudio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Header mit Navigationsleiste -->
+    <header>
+
+        <!-- Hamburger Menu Button -->
+        <button class="burger-menu" onclick="toggleMenu()">
+            &#9776;
+        </button>
+
+        <h1>Nagelstudio</h1>
+    
+        <nav>
+            <ul class="nav-links">
+                <li><a href="about.html">Über Uns</a></li>
+                <li><a href="services.html">Leistungen</a></li>
+                <li><a href="preise.html">Preise</a></li>
+                <li><a href="legal.html">Rechtliches</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero-Bereich -->
+    <section id="home" class="hero-section">
+        <h2>Willkommen bei Nagelstudio XYZ</h2>
+        <p>Dein Ort für wunderschöne Nägel und Entspannung.</p>
+        <a href="#contact" class="btn">Termin buchen</a>
+    </section>
+
+    <!-- Dienstleistungen -->
+    <section id="services" class="services-section">
+        <h2>Unsere Dienstleistungen</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <h3>Maniküre</h3>
+                <p>Professionelle Pflege und Styling für deine Hände.</p>
+            </div>
+            <div class="service-item">
+                <h3>Pediküre</h3>
+                <p>Entspannung und Schönheit für deine Füße.</p>
+            </div>
+            <div class="service-item">
+                <h3>Nageldesign</h3>
+                <p>Kreative Designs, die deine Nägel zum Highlight machen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerie -->
+    <!-- Galerie Sektion -->
+    <section class="gallery-section">
+        <h2>Galerie</h2>
+        <div class="gallery-container">
+            <div class="gallery-slider">
+                <div class="gallery-slide"><img src="images/Bild1.jpg" alt="Bild 1"></div>
+                <div class="gallery-slide"><img src="images/Bild2.jpg" alt="Bild 2"></div>
+                <div class="gallery-slide"><img src="images/Bild3.jpg" alt="Bild 3"></div>
+                <!-- Weitere Bilder hier hinzufügen -->
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section class="contact-info">
+        <h2>Kontaktieren Sie uns</h2>
+        <div class="contact-details">
+            <p><strong>E-Mail:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+            <p><strong>Telefon:</strong> +49 123 456 789</p>
+            <p><strong>Adresse:</strong> Musterstraße 1, 12345 Musterstadt, Deutschland</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Nagel Studio. Alle Rechte vorbehalten.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

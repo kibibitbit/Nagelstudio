@@ -1,0 +1,469 @@
+/* Allgemeines Styling */
+body {
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    background-color: #ffcecf; 
+    color: #333; /* Dunklerer Text für bessere Lesbarkeit */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+html{
+    height: 100%;
+}
+header {
+    background-color: #ff8eb1; /* Dunkleres Rosa */
+    color: #333;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Link Styling - Sanfte Farben und einfache Hover-Effekte */
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Navigation */
+nav {
+    padding: 0;
+}
+
+nav ul {
+    list-style-type: none; /* Entfernt die Aufzählungszeichen */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline; /* Links nebeneinander */
+}
+
+nav ul li a {
+    color: #333;
+    padding: 10px 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ffb3b3; /* Hellrosa beim Hover */
+
+}
+
+/* Burger-Menü Button (nur im Handy-Modus sichtbar) */
+.burger-menu {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Standard-Navigation */
+.nav-links {
+    display: flex;
+}
+
+/* Handy-Modus Anpassungen */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffebeb; /* Sehr helles Rosa */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        z-index: 100;
+        opacity: 0; /* Initiale Unsichtbarkeit */
+        transform: translateY(-20px); /* Startposition für die Animation */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Langsamere Transition */
+    }
+
+    .nav-links.show {
+        display: flex;
+        opacity: 1; /* Sichtbar */
+        transform: translateY(0); /* Zielposition */
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #fff;
+    }
+
+    .nav-links li a {
+        color: #ff6f7a; /* Dunkleres Rosa */
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .nav-links li a:hover {
+        background-color: #ff6f7a; /* Dunkleres Rosa beim Hover */
+        color: #fff; /* Weißer Text beim Hover */
+    }
+}
+
+/* Sektionen */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Willkommen Sektion */
+.welcome-section {
+    background-color: #8f7d7d; /* Sehr helles Rosa */
+    color: #333; /* Dunklerer Text für bessere Lesbarkeit */
+    
+}
+
+/* Über Uns Sektion */
+.about {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.219);
+    text-align: left;
+}
+
+.about h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.about-section {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.about-section h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.about-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+
+
+/* Leistungen Sektion */
+.services-section {
+    background-color: #ffcccc; /* Helles Rosa, aber etwas kräftiger */
+    padding: 50px 20px;
+    color: #333; /* Dunkler Text für bessere Lesbarkeit */
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Leicht kräftiger Schatten */
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+/* Galerie Sektion */
+.gallery-section {
+    background-color: #ffebeb; /* Sehr helles Rosa */
+    padding: 50px 20px;
+    color: #333; /* Dunklerer Text für bessere Lesbarkeit */
+    position: relative;
+}
+
+.gallery-container {
+    position: relative;
+    overflow: hidden; /* Verhindert das Überlaufen der Bilder */
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.gallery-slider {
+    display: flex;
+    transition: transform 0.5s ease; /* Animation für das Swipen */
+}
+
+.gallery-slide {
+    min-width: 100%; /* Jede Folie nimmt 100% der Containerbreite ein */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Zentriert die Bilder horizontal */
+    align-items: center; /* Zentriert die Bilder vertikal */
+}
+
+.gallery-slide img {
+    width: 50%; /* Bildbreite auf 50% der Containerbreite setzen */
+    height: auto; /* Höhe automatisch anpassen, um das Seitenverhältnis beizubehalten */
+    max-height: 500px; /* Maximale Höhe für Konsistenz */
+    object-fit:cover; /* Bildfüllung für konsistente Darstellung */
+    border-radius: 8px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Leichter Schatten für Tiefe */
+    display: block; /* Verhindert unnötige Lücken */
+}
+
+/* Navigation-Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50;
+    cursor: pointer;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Handy-Modus Anpassungen */
+@media (max-width: 768px) {
+    .gallery-slide img {
+        width: 80%; /* Größere Breite im Handy-Modus */
+        max-height: 200px; /* Kleinere maximale Höhe im Handy-Modus */
+    }
+}
+
+
+/* Navigation-Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Handy-Modus Anpassungen */
+@media (max-width: 768px) {
+    .gallery-slide img {
+        height: 200px; /* Kleinere Höhe im Handy-Modus */
+    }
+}
+
+/* Kontakt Sektion */
+.contact-info {
+    background-color: #ffffff44; /* Weißer Hintergrund für den Kontaktbereich */
+    padding: 10px;
+    margin: 20px auto;
+    max-width: 700px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-info h2 {
+    margin-top: 0;
+    color: #333; /* Dunkle Schriftfarbe für Überschrift */
+}
+
+.contact-details {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-details a {
+    color: #0066cc; /* Blau für Links */
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline; /* Unterstreichen bei Hover */
+}
+/* Preis-Seite */
+.preise {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.preise-container {
+    text-align: center;
+}
+
+.preise h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.preise-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.preis-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.preis-item h3 {
+    margin-top: 0;
+    color: #ff6f61;
+}
+
+.preis-item p {
+    margin: 5px 0;
+}
+
+/* Rechtliche Seite */
+.legal {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.legal-container {
+    text-align: center;
+}
+
+.legal h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.legal-content {
+    text-align: left;
+}
+
+.legal-content h3 {
+    color: #ff6f61;
+    margin-top: 20px;
+}
+
+.legal-content p {
+    margin: 10px 0;
+}
+
+.legal-content a {
+    color: #ff6f61;
+    text-decoration: none;
+}
+
+.legal-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
+footer {
+    background-color: #343a40; /* Dunkelgrau für den Footer */
+    color: #ffffff; /* Weiß für den Text im Footer */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Handy-Modus Anpassungen */
+@media (max-width: 768px) {
+    .gallery-slide img {
+        width: 80%; /* Größere Breite im Handy-Modus */
+        height: auto; /* Höhe automatisch anpassen */
+        max-height: 200px; /* Kleinere maximale Höhe im Handy-Modus */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #ff8eb1;
+    color: #333;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-weight: 600;
+}
+
+/* Globale Anpassungen für kleine Bildschirme */
+@media (max-width: 768px) {
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Einspaltiges Layout für kleine Bildschirme */
+    }
+
+    .contact-section form {
+        width: 90%;
+    }
+}
+
