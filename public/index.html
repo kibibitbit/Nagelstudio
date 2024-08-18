@@ -15,7 +15,7 @@
         <button class="burger-menu" onclick="toggleMenu()">
             &#9776;
         </button>
-
+        
         <h1>Nagelstudio</h1>
     
         <nav>
@@ -79,7 +79,21 @@
             <p><strong>Adresse:</strong> Musterstraße 1, 12345 Musterstadt, Deutschland</p>
         </div>
     </section>
-
+    <div id="cookie-banner">
+        Diese Website verwendet Cookies. <button class="cookie-button" id="accept-all">Alle akzeptieren</button>
+        <button class="cookie-button" id="accept-necessary">Nur notwendige akzeptieren</button>
+        <button class="cookie-button" id="cookie-settings-btn">Cookie-Einstellungen</button>
+    </div>
+    
+    <div id="cookie-settings">
+        <h3>Cookie-Einstellungen anpassen</h3>
+        <p>
+            <input type="checkbox" id="necessary-cookies" checked disabled> Notwendige Cookies<br>
+            <input type="checkbox" id="analytics-cookies"> Analytische Cookies<br>
+            <input type="checkbox" id="marketing-cookies"> Marketing Cookies
+        </p>
+        <button class="cookie-button" id="save-settings">Einstellungen speichern</button>
+    </div>
     <footer>
         <p>&copy; 2024 Nagel Studio. Alle Rechte vorbehalten.</p>
     </footer>

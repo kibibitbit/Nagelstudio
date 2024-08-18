@@ -17,15 +17,16 @@ html{
 header {
     background-color: #ff8eb1; /* Dunkleres Rosa */
     color: #333;
-    padding: 15px;
     display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
     justify-content: space-between;
     align-items: center;
     position: relative;
 }
 
 h1 {
-    margin: 0;
+    padding-left: 20px;
     font-size: 24px;
     font-weight: 700;
 }
@@ -40,6 +41,7 @@ a {
 nav {
     padding: 0;
 }
+
 
 nav ul {
     list-style-type: none; /* Entfernt die Aufzählungszeichen */
@@ -84,6 +86,10 @@ nav ul li a:hover {
     .burger-menu {
         display: block;
     }
+    h1{
+        margin-right: 20px;
+        padding: 0;
+    }
 
     .nav-links {
         display: none;
@@ -91,17 +97,17 @@ nav ul li a:hover {
         width: 100%;
         background-color: #ffebeb; /* Sehr helles Rosa */
         position: absolute;
-        top: 70px;
+        top: 100%;
         left: 0;
         z-index: 100;
-        opacity: 0; /* Initiale Unsichtbarkeit */
-        transform: translateY(-20px); /* Startposition für die Animation */
-        transition: opacity 0.5s ease, transform 0.5s ease; /* Langsamere Transition */
+        opacity: 0;
+        transform: translateY(-50px); /* Startposition für die Animation */
+        transition: 1s;
     }
 
     .nav-links.show {
         display: flex;
-        opacity: 1; /* Sichtbar */
+        opacity: 1;
         transform: translateY(0); /* Zielposition */
     }
 
@@ -414,6 +420,20 @@ section {
     text-decoration: underline;
 }
 
+#cookie-banner, #cookie-settings {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: none;
+}
+.cookie-button {
+    margin: 5px;
+}
 
 /* Footer */
 footer {
@@ -453,17 +473,14 @@ footer {
 
 /* Globale Anpassungen für kleine Bildschirme */
 @media (max-width: 768px) {
-    .service-list {
-        flex-direction: column;
-        align-items: center;
-    }
+
 
     .gallery-grid {
         grid-template-columns: 1fr; /* Einspaltiges Layout für kleine Bildschirme */
     }
 
     .contact-section form {
-        width: 90%;
+        width: 100%;
     }
 }
 
