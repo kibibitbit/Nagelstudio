@@ -83,11 +83,26 @@ nav ul li a:hover {
 
 /* Handy-Modus Anpassungen */
 @media (max-width: 768px) {
+    header {
+        background-color: #ff8eb1; /* Dunkleres Rosa */
+        color: #333;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    
     .burger-menu {
         display: block;
     }
+    a{
+        text-decoration: none;
+        text-align:center;
+        width: 100%;
+    }
     h1{
-        margin-right: 20px;
         padding: 0;
     }
 
